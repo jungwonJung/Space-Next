@@ -1,6 +1,7 @@
 const API_URL = "https://fdo.rocketlaunch.live/json/launches/next/5";
 const countdown = document.getElementById("countdown");
 
+//noice work jay, i am proud of you
 let nextScheduleDatas = {
   sort_date: 0,
   vehicleName: "",
