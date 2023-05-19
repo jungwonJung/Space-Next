@@ -14,26 +14,26 @@
   </head>
   <body>
     <main class="scroll-container">
-      <section class="scroll-area info-container">
+      <section class="scroll-area info-container" id="info-container">
         <!-- link to the image (below) -->
         <div class="logo" id="nav">
           <img src="" alt="Space Next logo" />
           <nav class="nav-buttons">
-            <button class="launch">Launch</button>
-            <button class="vote">Vote</button>
-            <button class="map">Location</button>
+            <a href="#info-container">Launch</a>
+            <a href="#vote-container">Vote</a>
+            <a href="#map-container">Location</a>
           </nav>
         </div>
         <div class="count-down-container">
-          <p class="nxt-launch">Next launch</p>
+          <p class="next-launch">Next launch</p>
           <!-- count down (JavaScript) -->
         </div>
         <div class="launch-info">
           <!-- add appropriate html (use jay current work on the launch repo) -->
         </div>
       </section>
-      <section class="scroll-area vote-container"></section>
-      <section class="scroll-area map-container"></section>
+      <section class="scroll-area vote-container" id="vote-container"></section>
+      <section class="scroll-area map-container" id="map-container"></section>
     </main>
   </body>
 </html>
