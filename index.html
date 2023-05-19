@@ -7,9 +7,12 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/_default.css">
+    <link rel="stylesheet" href="./css/map.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/getLocation.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -33,7 +36,19 @@
         </div>
       </section>
       <section class="scroll-area vote-container" id="vote-container"></section>
-      <section class="scroll-area map-container" id="map-container"></section>
+
+      <section class="scroll-area map-container" id="map-container">
+        <div class="map-upper-part">
+          <div id="myMap"></div>
+          <div class="map-info"></div>
+        </div>
+        <div class="image-bottom-container">
+          <img src="./assets/desktopB.jpg" alt="space view">
+          <a class="scroll-top-button" href="#"><img src="/assets/up-button.svg" alt="up-button"></a>
+        </div> 
+      </section>
+      
+      <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aool9P3XTLo6jB2HIYPXkrsFkipYBR5skYwZEARbxCMiV-Rkst9hDkbyLVGQP7AA' async></script>
     </main>
   </body>
 </html>
