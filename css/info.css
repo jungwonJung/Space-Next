@@ -1,0 +1,122 @@
+/* Background and structure */
+.info-container {
+  max-width: 1500px;
+  margin-inline: auto;
+  height: 900px;
+  background-color: #ffffff;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+    url(/assets/desktopA.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Logo container  */
+.logo-container {
+  height: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+}
+.logo-box {
+  padding-top: 5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  cursor: pointer;
+}
+.nav-buttons {
+  display: none;
+}
+.logo-container:hover .nav-buttons {
+  display: block;
+  padding-top: 10px;
+}
+.nav-buttons a {
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  padding: 0 5px;
+}
+/* Launch info */
+.launch-info {
+  height: 33%;
+  display: flex;
+  justify-content: end;
+}
+.info-box {
+  height: 300px;
+  width: 450px;
+  background-color: #141414;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Countdown container */
+.count-down-container {
+  height: 33%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.countdown-box {
+  height: 200px;
+  width: 80%;
+  background-color: #141414;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 834px) {
+  .logo-box {
+    padding-top: 10%;
+    padding-left: 5px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .logo-box img {
+    width: 90%;
+    height: 90%;
+  }
+  .nav-buttons a {
+    font-size: 26px;
+  }
+  .launch-info {
+    justify-content: center;
+  }
+  .info-box {
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 393px) {
+  .logo-box img {
+    width: 70%;
+    height: 70%;
+  }
+  .info-box {
+    height: 100%;
+    width: 80%;
+  }
+  .nav-buttons a {
+    font-size: 20px;
+  }
+}
