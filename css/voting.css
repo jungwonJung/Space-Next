@@ -10,7 +10,7 @@
 
 .vote-box {
   position: absolute;
-  width: 80%;
+  width: 70%;
   height: 250px;
   border: 1px solid white;
   background-color: #141414;
@@ -19,7 +19,7 @@
 
 .star-effect-box {
   position: relative;
-  bottom: -8%;
+  bottom: -1%;
   height: 1px;
   width: 1px;
   background-color: black;
