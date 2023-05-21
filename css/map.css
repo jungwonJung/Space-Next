@@ -1,0 +1,105 @@
+.map-container {
+  max-width: 1500px;
+  margin-inline: auto;
+  height: 900px;
+  background-color: black;
+  color: white;
+}
+
+.map-upper-part {
+  height: 400px;
+  padding-block: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#myMap {
+  width: 50%;
+  height: 380px;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  overflow: hidden;
+}
+
+.map-info {
+  background-color: #1E1E1E;
+  border: 1px solid white;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  padding: 15px 30px;  
+}
+
+.map-info p:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.launch-detail {
+  font-weight: bold;
+}
+
+.image-bottom-container {
+  width: 100%;
+  position: relative;
+  outline: red;
+}
+
+.image-bottom-container img {
+  max-width: 100%;
+}
+
+.scroll-top-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  transition: transform 150ms ease;
+}
+
+.scroll-top-button:hover {
+  opacity: 0.9;
+}
+
+.scroll-top-button:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 1500px) {
+  #myMap {
+    border-left: 1px solid white;
+    border-radius: 4px;
+  }
+  .map-info {
+    border-right: 1px solid white;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 834px) {
+  .map-container {
+    padding-inline: 40px;
+  }
+  .map-upper-part {
+    flex-direction: column;
+    justify-content: unset;
+    gap: 40px;
+  }
+  #myMap {
+    width: 100%;
+    border-left: 1px solid white;
+    border-radius: 4px;
+  }
+  .map-info {
+    width: 100%;
+    border-right: 1px solid white;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 393px) {
+  .map-container {
+    padding-inline: 20px;
+  }
+}
