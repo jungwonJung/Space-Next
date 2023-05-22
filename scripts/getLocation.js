@@ -2,6 +2,13 @@
 const API_BING = "AlwdnW7MMtPdYqpELeL8RZhaTO_Q_sLaonj958GFtex5jqKeHuVWg-n3dinIfBsN";
 let isUpcomingLaunchDisplayed = false;
 
+// document.querySelector(".scroll-top-button").addEventListener("click", () => {
+//   window.scrollTo({
+//     top: 0,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+// })
 
 
 async function getLocation() {
