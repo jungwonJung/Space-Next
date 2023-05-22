@@ -1,25 +1,113 @@
 .vote-container {
   max-width: 1500px;
   margin-inline: auto;
-  height: 900px;
+  height: 100vh;
   background-color: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
+.vote-container h2 {
+  text-align: center;
+  width: 60%;
+  color: #0ac6ff;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
 .vote-box {
-  position: absolute;
+  margin-top: -600px;
   width: 70%;
-  height: 250px;
+  height: 280px;
   border: 1px solid white;
   background-color: #141414;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.vote-box button {
+  width: 80%;
+  height: 120px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* #up-votes img:hover {
+  animation-name: zoomOutUp;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+  }
+}
+
+#down-votes img:hover {
+  animation-name: zoomOutDown;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+  }
+} */
+
+.vote-box button:hover {
+  cursor: pointer;
+}
+
+.vote-box p {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.thumbs-up-box,
+.thumbs-down-box {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbs-up-box button {
+  background-color: #006d8f;
+}
+
+.thumbs-down-box button {
+  background-color: #a40000;
 }
 
 .star-effect-box {
+  z-index: 0;
   position: relative;
-  bottom: -1%;
+  bottom: 23%;
   height: 1px;
   width: 1px;
   background-color: black;
