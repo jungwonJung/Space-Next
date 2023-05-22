@@ -15,7 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./scripts/getLocation.js"></script>
-    <title>Document</title>
+    <script type="module" src="./scripts/vote.js"></script>
+    <title>Develop Space Next</title>
   </head>
   <body>
     <main class="scroll-container">
@@ -48,22 +49,26 @@
       <section class="scroll-area vote-container" id="vote-container">
         <div class="star-effect-box"></div>
         <div class="vote-box">
-          <div class="thumbs-up-box"></div>
-          <div class="thumbs-down-box"></div>
+          <div class="thumbs-up-box">
+            <p id="up-votes-count">0123123</p>
+            <button id="up-votes">
+              <img src="/assets/rocket.svg" alt="rocket" />
+            </button>
+          </div>
+          <div class="thumbs-down-box">
+            <p id="down-votes-count">0</p>
+            <button id="down-votes">
+              <img src="/assets/crash.svg" alt="crash" />
+            </button>
+          </div>
         </div>
       </section>
 
       <section class="scroll-area map-container" id="map-container">
-        <div class="map-upper-part">
-          <div id="myMap"></div>
-          <div class="map-info"></div>
-        </div>
-        <div class="image-bottom-container">
-          <img src="./assets/desktopB.jpg" alt="space view" />
-          <a class="scroll-top-button" href="#"
-            ><img src="/assets/up-button.svg" alt="up-button"
-          /></a>
-        </div>
+        <div id="myMap"></div>
+        <div class="map-info"></div>
+        <a class="scroll-top-button" href="#" title="scroll-to-top-button">
+        </a>
       </section>
 
       <script
