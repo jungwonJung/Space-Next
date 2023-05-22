@@ -2,7 +2,7 @@
 .info-container {
   max-width: 1500px;
   margin-inline: auto;
-  height: 900px;
+  height: 100vh;
   background-color: #ffffff;
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
@@ -16,13 +16,13 @@
 }
 /* Logo container  */
 .logo-container {
-  height: 33%;
+  height: 20%;
   display: flex;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
 }
 .logo-box {
-  padding-top: 5%;
+  padding-top: 20px;
   padding-left: 2.5%;
   display: flex;
   flex-direction: column;
@@ -50,24 +50,29 @@
 }
 /* Launch info */
 .launch-info {
-  height: 33%;
+  height: 40%;
   display: flex;
   justify-content: end;
 }
 .info-box {
-  height: 300px;
-  width: 450px;
+  padding: 20px 50px 20px 20px;
+  height: fit-content;
+  max-width: 450px;
   background-color: #141414;
   border-radius: 5px 0 0 5px;
   border: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+}
+.info-box p{
+  font-size: 28px;
 }
 /* Countdown container */
 .count-down-container {
-  height: 33%;
+  height: 40%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -75,13 +80,23 @@
 .countdown-box {
   height: 200px;
   width: 80%;
+  padding: 35px 0;
   background-color: #141414;
   border-radius: 5px;
   border: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.next-launch{
+  font-size: 22px;
+  color: #0AC6FF;
+  font-weight: bold;
+}
+.countdown{
+  font-size: 50px;
 }
 
 @media (max-width: 834px) {
@@ -102,9 +117,21 @@
     justify-content: center;
   }
   .info-box {
-    height: 100%;
+    height: fit-conten;
     width: 80%;
     border-radius: 5px;
+  }
+  .info-box p{
+    font-size: 22px;
+  }
+  .countdown-box{
+    //
+  }
+  .next-launch{
+    font-size: 18px;
+  }
+  .countdown{
+    font-size: 40px;
   }
 }
 @media (max-width: 393px) {
@@ -113,8 +140,9 @@
     height: 70%;
   }
   .info-box {
-    height: 100%;
+    height: fit-content;
     width: 80%;
+    overflow: hidden;
   }
   .nav-buttons a {
     font-size: 20px;

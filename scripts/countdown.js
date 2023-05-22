@@ -1,6 +1,6 @@
 const API_URL = "https://fdo.rocketlaunch.live/json/launches/next/5";
 const countdown = document.getElementById("countdown");
-
+const infoBox = document.getElementById("info-box");
 
 let nextScheduleDatas = {
   sort_date: 0,
@@ -41,9 +41,9 @@ async function countDown() {
   const {
     missonName,
     vehicleName,
-    country,
-    state,
-    location,
+    // country,
+    // state,
+    // location,
     launchDescription,
   } = await getData();
 
@@ -62,16 +62,12 @@ async function countDown() {
     const hours = Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60));
     const minutes = Math.floor((comparedTime % (60 * 60)) / 60);
     const seconds = Math.floor(comparedTime % 60);
-    countdown.innerHTML = `
-    Next event </br> 
-    Mission Name: ${missonName}} </br> 
-    Vehicle Name: ${vehicleName} </br>
-    Country: ${country} </br>
-    State: ${state} </br>
-    Location: ${location} </br>
-    Description: ${launchDescription} </br>
-    ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds
-  `;
+    countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    infoBox.innerHTML = `
+      <p><b style="color:#0AC6FF;">Mission:</b> ${missonName}</p><br>
+      <p><b style="color:#0AC6FF;">Rocket:</b> ${vehicleName}</p><br>
+      <p><b style="color:#0AC6FF;"> Description:</b> ${launchDescription} </p>
+    `;
   } else {
     countdown.innerHTML = "No upcoming events found";
   }

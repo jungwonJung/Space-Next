@@ -1,7 +1,7 @@
 .map-container {
   max-width: 1500px;
   margin-inline: auto;
-  height: 900px;
+  height: 100vh;
   background-color: black;
   color: white;
 }
