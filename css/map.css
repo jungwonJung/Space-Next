@@ -27,11 +27,11 @@
 
 .map-info {
   font-size: 20px;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   border: 1px solid white;
   border-radius: 4px 0 0 4px;
   border-right: none;
-  padding: 30px 30px;  
+  padding: 30px 30px;
 }
 
 .map-info p:not(:last-of-type) {
@@ -40,7 +40,7 @@
 
 .launch-detail {
   font-weight: bold;
-  color: #0AC6FF;
+  color: #0ac6ff;
 }
 
 .image-bottom-container {
@@ -63,9 +63,8 @@
 
 .scroll-top-button img {
   -webkit-user-select: none;
-    user-select: none;
+  user-select: none;
 }
-
 
 .scroll-top-button:hover {
   opacity: 0.9;
@@ -76,7 +75,6 @@
 }
 
 @media (min-width: 1500px) {
-
   #myMap {
     border-left: 1px solid white;
     border-radius: 4px;
@@ -118,7 +116,6 @@
   .map-container {
     padding-inline: 20px;
     height: 500px;
-    
   }
   .map-info {
     width: 100%;
