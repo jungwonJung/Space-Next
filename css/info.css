@@ -67,7 +67,7 @@
   justify-content: space-between;
   gap: 5px;
 }
-.info-box p{
+.info-box p {
   font-size: 28px;
 }
 /* Countdown container */
@@ -90,12 +90,12 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.next-launch{
+.next-launch {
   font-size: 22px;
-  color: #0AC6FF;
+  color: #0ac6ff;
   font-weight: bold;
 }
-.countdown{
+.countdown {
   font-size: 50px;
 }
 
@@ -121,16 +121,15 @@
     width: 80%;
     border-radius: 5px;
   }
-  .info-box p{
+  .info-box p {
     font-size: 22px;
   }
-  .countdown-box{
-    //
-  }
-  .next-launch{
+  /* .countdown-box {
+  } */
+  .next-launch {
     font-size: 18px;
   }
-  .countdown{
+  .countdown {
     font-size: 40px;
   }
 }
