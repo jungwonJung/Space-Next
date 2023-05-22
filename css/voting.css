@@ -11,10 +11,30 @@
 
 .vote-container h2 {
   text-align: center;
-  width: 60%;
+  width: 80%;
   color: #0ac6ff;
   font-size: 3.5rem;
   font-weight: 600;
+}
+
+.vote-container h2 img {
+  width: 9%;
+  height: 90px;
+}
+
+.text-animation-effect {
+  color: transparent;
+  text-transform: uppercase;
+  background: linear-gradient(
+    cornflowerblue 30%,
+    white,
+    darkmagenta 60%,
+    cornflowerblue 100%
+  );
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px silver;
+  filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
 }
 
 .vote-box {
@@ -37,52 +57,71 @@
   border-radius: 12px;
 }
 
-/* #up-votes img:hover {
-  animation-name: zoomOutUp;
-  animation-duration: 0.75s;
+.vote-box button img {
+  width: 20%;
+}
+
+.slide-out-up {
+  animation-name: slideOutUp;
+  animation-duration: 1.3s;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
-@keyframes zoomOutUp {
-  40% {
-    opacity: 1;
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+@keyframes slideOutUp {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 
-  to {
-    opacity: 0;
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
-    transform-origin: center bottom;
+  100% {
+    transform: translate3d(0, -100%, 0);
+    visibility: hidden;
   }
 }
 
-#down-votes img:hover {
-  animation-name: zoomOutDown;
-  animation-duration: 0.75s;
-  animation-timing-function: ease;
+.hinge {
+  animation-name: hinge;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
 
-@keyframes zoomOutDown {
-  40% {
+@keyframes hinge {
+  0% {
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
     opacity: 1;
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
   }
 
   to {
     opacity: 0;
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
-    transform-origin: center bottom;
+    transform: translate3d(0, 700px, 0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
   }
-} */
+}
 
 .vote-box button:hover {
   cursor: pointer;
 }
 
 .vote-box p {
-  color: white;
+  color: #0ac6ff;
   font-size: 3rem;
   margin-bottom: 30px;
 }
@@ -161,5 +200,53 @@
   }
   100% {
     transform: scale(0.9);
+  }
+}
+
+@media (max-width: 834px) {
+  .vote-container {
+    justify-content: space-between;
+  }
+  .vote-container h2 {
+    margin-top: 100px;
+    font-size: 2.3rem;
+  }
+
+  .vote-box {
+    width: 80%;
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .vote-box button {
+    width: 60%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 510px) {
+  .vote-container h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 393px) {
+  .vote-container h2 {
+    margin-top: 100px;
+    font-size: 1.5rem;
+  }
+
+  .vote-container h2 img {
+    width: 6%;
+    height: 30px;
+  }
+
+  .vote-box {
+    margin-bottom: 50px;
+  }
+
+  .vote-box button {
+    width: 90%;
+    height: 80px;
   }
 }
