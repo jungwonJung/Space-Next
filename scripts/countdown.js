@@ -58,11 +58,16 @@ async function countDown() {
   comparedTime = diff;
 
   if (comparedTime !== Infinity) {
-    const days = Math.floor(comparedTime / (24 * 60 * 60));
-    const hours = Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60));
-    const minutes = Math.floor((comparedTime % (60 * 60)) / 60);
-    const seconds = Math.floor(comparedTime % 60);
-    countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    const days = String(Math.floor(comparedTime / (24 * 60 * 60))).padStart(2, '0');
+const hours = String(Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60))).padStart(2, '0');
+const minutes = String(Math.floor((comparedTime % (60 * 60)) / 60)).padStart(2, '0');
+const seconds = String(Math.floor(comparedTime % 60)).padStart(2, '0');
+
+    countdown.innerHTML = `<div class="separateTime"><p class="timeChange">${days}:</p> <p class="times">Day(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${hours}:</p> <p class="times">Hour(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${minutes}:</p> <p class="times">Minute(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${seconds}</p> <p class="times">Second(s)</p></div>`
+
     infoBox.innerHTML = `
       <p><b style="color:#0AC6FF;">Mission:</b> ${missonName}</p><br>
       <p><b style="color:#0AC6FF;">Rocket:</b> ${vehicleName}</p><br>
@@ -75,5 +80,5 @@ async function countDown() {
 
 window.onload = () => {
   countDown();
-  // setInterval(countDown, 1000);
+  setInterval(countDown, 1000);
 };
