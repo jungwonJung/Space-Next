@@ -59,7 +59,7 @@ async function countDown() {
 
   if (comparedTime !== Infinity) {
     const days = String(Math.floor(comparedTime / (24 * 60 * 60))).padStart(2, '0');
-const hours = String(Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60))).padStart(2, '0');
+    const hours = String(Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60))).padStart(2, '0');
 const minutes = String(Math.floor((comparedTime % (60 * 60)) / 60)).padStart(2, '0');
 const seconds = String(Math.floor(comparedTime % 60)).padStart(2, '0');
 
