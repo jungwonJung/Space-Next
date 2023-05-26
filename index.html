@@ -15,7 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./scripts/getLocation.js"></script>
-    <title>Document</title>
+    <script type="module" src="./scripts/vote.js"></script>
+    <title>Develop Space Next</title>
   </head>
   <body>
     <main class="scroll-container">
@@ -24,48 +25,61 @@
           <div class="logo-box">
             <img src="/assets/logo.svg" alt="Space Next logo" />
             <nav class="nav-buttons">
-              <a href="#info-container">Launch</a>
-              <a href="#vote-container">Vote</a>
-              <a href="#map-container">Location</a>
+              <a href="#info-container" class="launchNav">Launch</a>
+              <a href="#vote-container" class="voteNav">Vote</a>
+              <a href="#map-container" class="locationNav">Location</a>
             </nav>
           </div>
         </div>
         <div class="launch-info">
-          <div class="info-box">
-            <!-- add appropriate html (use jay current work on the launch repo) -->
-            <p>Test Test Test</p>
-            <p>Test Test Test</p>
-            <p>Test Test Test</p>
-          </div>
+          <div class="info-box" id="info-box"></div>
         </div>
         <div class="count-down-container">
           <div class="countdown-box">
             <p class="next-launch">Next launch</p>
-            <p id="countdown"></p>
+            <p class="countdown" id="countdown"></p>
           </div>
         </div>
       </section>
       <section class="scroll-area vote-container" id="vote-container">
+        <h2 class="text-animation-effect">
+          <span class="text-animation-effect">Launch or Crash?</span>
+        </h2>
         <div class="star-effect-box"></div>
         <div class="vote-box">
-          <div class="thumbs-up-box"></div>
-          <div class="thumbs-down-box"></div>
+          <div class="thumbs-up-box">
+            <p class="text-animation-effect" id="up-votes-count">0123123</p>
+            <button id="up-votes">
+              <img src="/assets/rocket.svg" alt="rocket" />
+            </button>
+          </div>
+          <div class="thumbs-down-box">
+            <p class="text-animation-effect" id="down-votes-count">0</p>
+            <button id="down-votes">
+              <img src="/assets/crash.svg" alt="crash" />
+            </button>
+          </div>
         </div>
+        <h2>
+          <span class="text-animation-effect"
+            >Let's wait alongside
+            <img src="/assets/doge.png" alt="doge" />!!</span
+          >
+        </h2>
       </section>
 
       <section class="scroll-area map-container" id="map-container">
-        <div class="map-upper-part">
-          <div id="myMap"></div>
-          <div class="map-info"></div>
-        </div>
-        <div class="image-bottom-container">
-          <img src="./assets/desktopB.jpg" alt="space view" />
-          <a class="scroll-top-button" href="#"
-            ><img src="/assets/up-button.svg" alt="up-button"
-          /></a>
-        </div>
+        <div id="myMap"></div>
+        <div class="map-info"></div>
+        <a
+          class="scroll-top-button"
+          href="#info-container"
+          title="scroll-to-top-button"
+        >
+        </a>
       </section>
-
+      <script src="/scripts/countdown.js"></script>
+      <script src="/scripts/navScroll.js"></script>
       <script
         type="text/javascript"
         src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aool9P3XTLo6jB2HIYPXkrsFkipYBR5skYwZEARbxCMiV-Rkst9hDkbyLVGQP7AA"

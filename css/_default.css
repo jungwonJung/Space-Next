@@ -10,3 +10,14 @@ body {
   background-color: #000000;
   font-family: "Cabin", sans-serif;
 }
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+  height: 100vh;
+}
