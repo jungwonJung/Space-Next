@@ -84,6 +84,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  z-index: 3;
 }
 .countdown-box {
   height: fit-content;
@@ -111,6 +112,7 @@
   text-align: center;
 }
 .timeChange {
+  width: 150px;
   font-size: 100px;
   font-weight: bold;
   margin-bottom: 2%;
@@ -163,6 +165,7 @@
     font-size: 18px;
   }
   .timeChange {
+    width: 80px;
     font-size: 50px;
   }
   .times {
@@ -195,4 +198,15 @@
   .times {
     font-size: 10;
   } */
+}
+@media (max-height: 699px) {
+  .count-down-container {
+    justify-content: flex-start;
+  }
+  .countdown-box {
+    padding: 35px;
+    width: 650px;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
