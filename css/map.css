@@ -72,7 +72,7 @@
   transform: scale(0.95);
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
   #myMap {
     border-left: 1px solid white;
     border-radius: 4px;
