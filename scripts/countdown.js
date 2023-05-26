@@ -1,6 +1,6 @@
 const API_URL = "https://fdo.rocketlaunch.live/json/launches/next/5";
 const countdown = document.getElementById("countdown");
-
+const infoBox = document.getElementById("info-box");
 
 let nextScheduleDatas = {
   sort_date: 0,
@@ -41,9 +41,9 @@ async function countDown() {
   const {
     missonName,
     vehicleName,
-    country,
-    state,
-    location,
+    // country,
+    // state,
+    // location,
     launchDescription,
   } = await getData();
 
@@ -58,20 +58,21 @@ async function countDown() {
   comparedTime = diff;
 
   if (comparedTime !== Infinity) {
-    const days = Math.floor(comparedTime / (24 * 60 * 60));
-    const hours = Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60));
-    const minutes = Math.floor((comparedTime % (60 * 60)) / 60);
-    const seconds = Math.floor(comparedTime % 60);
-    countdown.innerHTML = `
-    Next event </br> 
-    Mission Name: ${missonName}} </br> 
-    Vehicle Name: ${vehicleName} </br>
-    Country: ${country} </br>
-    State: ${state} </br>
-    Location: ${location} </br>
-    Description: ${launchDescription} </br>
-    ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds
-  `;
+    const days = String(Math.floor(comparedTime / (24 * 60 * 60))).padStart(2, '0');
+    const hours = String(Math.floor((comparedTime % (24 * 60 * 60)) / (60 * 60))).padStart(2, '0');
+const minutes = String(Math.floor((comparedTime % (60 * 60)) / 60)).padStart(2, '0');
+const seconds = String(Math.floor(comparedTime % 60)).padStart(2, '0');
+
+    countdown.innerHTML = `<div class="separateTime"><p class="timeChange">${days}:</p> <p class="times">Day(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${hours}:</p> <p class="times">Hour(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${minutes}:</p> <p class="times">Minute(s)</p></div>
+    <div class="separateTime"><p class="timeChange">${seconds}</p> <p class="times">Second(s)</p></div>`
+
+    infoBox.innerHTML = `
+      <p><b style="color:#0AC6FF;">Mission:</b> ${missonName}</p><br>
+      <p><b style="color:#0AC6FF;">Rocket:</b> ${vehicleName}</p><br>
+      <p><b style="color:#0AC6FF;"> Description:</b> ${launchDescription} </p>
+    `;
   } else {
     countdown.innerHTML = "No upcoming events found";
   }
@@ -79,5 +80,5 @@ async function countDown() {
 
 window.onload = () => {
   countDown();
-  // setInterval(countDown, 1000);
+  setInterval(countDown, 1000);
 };

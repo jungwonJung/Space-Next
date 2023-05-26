@@ -1,8 +1,8 @@
 /* Background and structure */
 .info-container {
-  max-width: 1500px;
+  max-width: 100vw;
   margin-inline: auto;
-  height: 900px;
+  height: 100vh;
   background-color: #ffffff;
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
@@ -16,13 +16,13 @@
 }
 /* Logo container  */
 .logo-container {
-  height: 33%;
+  height: 20%;
   display: flex;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
 }
 .logo-box {
-  padding-top: 5%;
+  padding-top: 20px;
   padding-left: 2.5%;
   display: flex;
   flex-direction: column;
@@ -30,9 +30,14 @@
   justify-content: center;
   max-width: max-content;
   cursor: pointer;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 .nav-buttons {
   display: none;
+  position: sticky;
+  top: 0;
 }
 .logo-container:hover .nav-buttons {
   display: block;
@@ -48,52 +53,92 @@
   font-size: 32px;
   padding: 0 5px;
 }
+.active-link {
+  border-bottom: 3px solid #0ac6ff;
+}
 /* Launch info */
 .launch-info {
-  height: 33%;
+  height: 40%;
   display: flex;
   justify-content: end;
 }
 .info-box {
-  height: 300px;
-  width: 450px;
+  padding: 20px 50px 20px 20px;
+  height: fit-content;
+  max-width: 450px;
   background-color: #141414;
   border-radius: 5px 0 0 5px;
   border: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+}
+.info-box p {
+  font-size: 28px;
 }
 /* Countdown container */
 .count-down-container {
-  height: 33%;
+  height: 40%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 .countdown-box {
-  height: 200px;
-  width: 80%;
+  height: fit-content;
+  width: 70%;
+  padding: 35px 0;
   background-color: #141414;
   border-radius: 5px;
   border: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.next-launch {
+  font-size: 22px;
+  color: #0ac6ff;
+  font-weight: bold;
+}
+.countdown {
+  display: flex;
+}
+.separateTime {
+  text-align: center;
+}
+.timeChange {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 2%;
 }
 
+.times {
+  font-size: 16;
+}
+
+@media (min-width: 1800px) {
+  .logo-box {
+    margin-left: 10%;
+  }
+  .info-box {
+    margin-right: 10%;
+    border-radius: 5px;
+  }
+}
 @media (max-width: 834px) {
   .logo-box {
-    padding-top: 10%;
-    padding-left: 5px;
+    padding-top: 2%;
+    padding-left: 2%;
     align-items: flex-start;
     justify-content: center;
   }
   .logo-box img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
   }
   .nav-buttons a {
     font-size: 26px;
@@ -102,9 +147,26 @@
     justify-content: center;
   }
   .info-box {
-    height: 100%;
+    height: fit-conten;
     width: 80%;
     border-radius: 5px;
+  }
+  .countdown-box {
+    width: 80%;
+    height: fit-content;
+    text-align: center;
+  }
+  .info-box p {
+    font-size: 22px;
+  }
+  .next-launch {
+    font-size: 18px;
+  }
+  .timeChange {
+    font-size: 50px;
+  }
+  .times {
+    font-size: 8px;
   }
 }
 @media (max-width: 393px) {
@@ -113,10 +175,24 @@
     height: 70%;
   }
   .info-box {
-    height: 100%;
+    height: fit-content;
     width: 80%;
+    overflow: hidden;
   }
   .nav-buttons a {
     font-size: 20px;
   }
+  .countdown {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .timeChange {
+    font-size: 30px;
+  }
+  .times {
+    font-size: 10;
+  } */
 }
