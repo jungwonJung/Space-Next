@@ -19,7 +19,7 @@ Via the endpoint `/json/launches/next/5` the API gives you free access to the da
 
 The [Bing Maps Locations API](https://learn.microsoft.com/en-us/bingmaps/rest-services/locations/) provides a map and a pin for locations based on various data. The `find-a-location-by-point` endpoint searches locations based on coordinates.
 
-##Authors
+## Authors
 
 - [Paul Hondl](https://github.com/paulhondl)
 - [Thomas Lis](https://github.com/13-TOMMY)
