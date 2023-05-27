@@ -21,6 +21,7 @@ The [Bing Maps Locations API](https://learn.microsoft.com/en-us/bingmaps/rest-se
 
 ## Authors
 
-- [Paul Hondl](https://github.com/paulhondl)
-- [Thomas Lis](https://github.com/13-TOMMY)
 - [Jungwon Jung](https://github.com/jungwonJung)
+- [Thomas Lis](https://github.com/13-TOMMY)
+- [Paul Hondl](https://github.com/paulhondl)
+
