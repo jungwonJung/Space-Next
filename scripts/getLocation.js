@@ -1,15 +1,5 @@
-// let API_BING = "Aool9P3XTLo6jB2HIYPXkrsFkipYBR5skYwZEARbxCMiV-Rkst9hDkbyLVGQP7AA";
 const API_BING = "AlwdnW7MMtPdYqpELeL8RZhaTO_Q_sLaonj958GFtex5jqKeHuVWg-n3dinIfBsN";
 let isUpcomingLaunchDisplayed = false;
-
-// document.querySelector(".scroll-top-button").addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-// })
-
 
 async function getLocation() {
   
@@ -29,7 +19,6 @@ async function getLocation() {
     <p>State: <span class="launch-detail">${state}<br>
     <p>Launch Pad: <span class="launch-detail">${name}<br>`
   
-
   // Determine coordinates from one of four possible facilities where rocket can be launched
   
   let coordinates = [];
