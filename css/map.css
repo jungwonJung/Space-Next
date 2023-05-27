@@ -73,6 +73,7 @@
 }
 
 @media (min-width: 1800px) {
+
   #myMap {
     border-left: 1px solid white;
     border-radius: 4px;
