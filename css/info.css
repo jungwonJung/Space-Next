@@ -195,6 +195,9 @@
   .nav-buttons a {
     font-size: 20px;
   }
+  .countdown-box {
+    padding: 0;
+  }
   .countdown {
     display: flex;
     width: 70%;
@@ -222,7 +225,7 @@
     justify-content: flex-start;
   }
   .countdown-box {
-    padding: 35px;
+    padding: 10px;
     width: 650px;
     align-items: center;
     justify-content: space-around;
