@@ -60,7 +60,7 @@
 .launch-info {
   height: 40%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .info-box {
   padding: 20px 50px 20px 20px;
@@ -147,11 +147,15 @@
   }
   .launch-info {
     justify-content: center;
+    align-items: flex-start;
   }
   .info-box {
     height: fit-conten;
     width: 80%;
     border-radius: 5px;
+  }
+  .count-down-container{
+    align-items: center;
   }
   .countdown-box {
     width: 80%;
@@ -181,25 +185,34 @@
     height: fit-content;
     width: 80%;
     overflow: hidden;
+    font-size: 16px;
   }
   .nav-buttons a {
     font-size: 20px;
   }
   .countdown {
     display: flex;
-    flex-wrap: wrap;
     width: 70%;
     align-items: center;
     justify-content: center;
   }
-  /* .timeChange {
-    font-size: 30px;
+  .next-launch {
+    font-size: 14px;
+  }
+  .timeChange {
+    width: 50px;
+    font-size: 36px;
   }
   .times {
-    font-size: 10;
-  } */
+    font-size: 6px;
+  }
 }
-@media (max-height: 699px) {
+@media (max-width: 355px) {
+  .count-down-container{
+    align-items: flex-end;
+  }
+}
+@media (max-height: 650px) {
   .count-down-container {
     justify-content: flex-start;
   }
