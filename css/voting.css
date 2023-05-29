@@ -216,6 +216,10 @@
     width: 60%;
     height: 100px;
   }
+
+  .bottom-side-text {
+    display: none;
+  }
 }
 
 @media (max-width: 510px) {
@@ -225,6 +229,9 @@
 }
 
 @media (max-width: 393px) {
+  .vote-container {
+    justify-content: flex-end;
+  }
   .vote-container h2 {
     font-size: 1.5rem;
   }
@@ -236,10 +243,23 @@
 
   .vote-box {
     margin-bottom: 50px;
+    height: 430px;
+  }
+  .vote-box p {
+    margin: 0;
+    padding: 10px;
   }
 
   .vote-box button {
     width: 90%;
     height: 80px;
+  }
+
+  .thumbs-up-box {
+    margin-bottom: -50px;
+  }
+
+  .star-effect-box {
+    bottom: -30%;
   }
 }
