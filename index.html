@@ -43,7 +43,6 @@
     <script type="module" src="./scripts/getLocation.js"></script>
     <script type="module" src="./scripts/vote.js"></script>
     <script type="module" src="/scripts/countdown.js"></script>
-    <script src="/scripts/navScroll.js"></script>
     <title>Develop Space Next</title>
   </head>
   <body>
@@ -51,7 +50,7 @@
       <section class="scroll-area info-container" id="info-container">
         <div class="logo-container" id="nav">
           <div class="logo-box">
-            <img src="/assets/logo.svg" alt="Space Next logo" />
+            <img id="logo-img" src="/assets/logo.svg" alt="Space Next logo" />
             <nav class="nav-buttons">
               <a href="#info-container" class="launchNav">Launch</a>
               <a href="#vote-container" class="voteNav">Vote</a>
@@ -113,5 +112,6 @@
         async
       ></script>
     </main>
+    <script src="/scripts/navScroll.js"></script>
   </body>
 </html>
