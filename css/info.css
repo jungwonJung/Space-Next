@@ -212,7 +212,7 @@
     align-items: flex-end;
   }
 }
-@media (max-height: 650px) {
+@media (max-height: 684px) {
   .count-down-container {
     justify-content: flex-start;
   }
