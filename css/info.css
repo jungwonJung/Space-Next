@@ -150,7 +150,7 @@
     align-items: flex-start;
   }
   .info-box {
-    height: fit-conten;
+    height: fit-content;
     width: 80%;
     border-radius: 5px;
   }
@@ -178,7 +178,7 @@
 }
 @media (max-width: 393px) {
   .info-container {
-    height: 650px;
+    height: 665px;
   }
 
   .logo-box img {
