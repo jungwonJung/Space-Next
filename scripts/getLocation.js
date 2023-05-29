@@ -7,8 +7,8 @@ async function getLocation() {
 
   const rocketLaunchPromise = await fetch("https://fdo.rocketlaunch.live/json/launches/next/5");
   const rocketLaunchData = await rocketLaunchPromise.json();
-  let nextSpaceXLaunch = rocketLaunchData.result.find(launch => launch.provider.name === "SpaceX");
-  let locationOfLaunch = nextSpaceXLaunch.pad.location.name;
+  const nextSpaceXLaunch = rocketLaunchData.result.find(launch => launch.provider.name === "SpaceX");
+  const locationOfLaunch = nextSpaceXLaunch.pad.location.name;
   
   // Display Rocket Info in div next to map
 
