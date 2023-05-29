@@ -186,7 +186,7 @@
     height: 70%;
   }
   .info-box {
-    height: fit-content;
+    height: 340px;
     width: 80%;
     overflow: hidden;
     font-size: 16px;
