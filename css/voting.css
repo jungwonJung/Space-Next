@@ -231,6 +231,7 @@
 @media (max-width: 393px) {
   .vote-container {
     justify-content: flex-end;
+    height: 650px;
   }
   .vote-container h2 {
     font-size: 1.5rem;

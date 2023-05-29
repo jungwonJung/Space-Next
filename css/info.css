@@ -154,7 +154,7 @@
     width: 80%;
     border-radius: 5px;
   }
-  .count-down-container{
+  .count-down-container {
     align-items: center;
   }
   .countdown-box {
@@ -177,6 +177,10 @@
   }
 }
 @media (max-width: 393px) {
+  .info-container {
+    height: 650px;
+  }
+
   .logo-box img {
     width: 70%;
     height: 70%;
@@ -208,7 +212,7 @@
   }
 }
 @media (max-width: 355px) {
-  .count-down-container{
+  .count-down-container {
     align-items: flex-end;
   }
 }
