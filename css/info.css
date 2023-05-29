@@ -190,6 +190,7 @@
     width: 80%;
     overflow: hidden;
     font-size: 16px;
+    gap: 2px;
   }
   .nav-buttons a {
     font-size: 20px;
