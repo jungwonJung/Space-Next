@@ -23,11 +23,11 @@ body {
 }
 
 @media (max-width: 393px) {
-  /* .scroll-container {
+  .scroll-container {
     height: 660px;
   }
 
   .scroll-area {
     height: 660px;
-  } */
+  }
 }
