@@ -114,7 +114,7 @@
     padding-inline: 20px;
     height: 650px;
   }
-  #myMap{
+  #myMap {
     height: 220px;
   }
   .map-info {
@@ -122,9 +122,10 @@
     font-size: 16px;
   }
   .scroll-top-button {
-    bottom: 30px;
+    bottom: 40px;
     right: 10px;
     width: 50px;
     height: 50px;
+    margin-bottom: 10px;
   }
 }
