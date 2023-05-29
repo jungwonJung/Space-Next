@@ -73,7 +73,6 @@
 }
 
 @media (min-width: 1800px) {
-
   #myMap {
     border-left: 1px solid white;
     border-radius: 4px;
@@ -108,13 +107,12 @@
     width: 60px;
     height: 60px;
   }
-  
 }
 
 @media (max-width: 393px) {
   .map-container {
     padding-inline: 20px;
-    height: 500px;
+    height: 650px;
   }
   .map-info {
     width: 100%;
@@ -125,5 +123,4 @@
     width: 50px;
     height: 50px;
   }
-  
 }
