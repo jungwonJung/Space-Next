@@ -3,7 +3,11 @@
 
 ## [Check Next Launch - Web site](https://stupendous-mandazi-1fbde3.netlify.app/#info-container)
 
+## YouTube
 ## [![SpaceNext - Video](https://i.ytimg.com/vi/padmu6SLFe8/hqdefault.jpg)](https://youtu.be/padmu6SLFe8)
+
+
+![space-next2](https://github.com/jungwonJung/Space-Next/assets/63602609/3a751a76-4f67-45f0-a4dc-044a736765b5)
 
 
 A website that provides information on the upcoming SpaceX Launch. It consists of three sections:
