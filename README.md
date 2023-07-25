@@ -7,7 +7,8 @@
 ## [![SpaceNext - Video](https://i.ytimg.com/vi/padmu6SLFe8/hqdefault.jpg)](https://youtu.be/padmu6SLFe8)
 
 
-![space-next2](https://github.com/jungwonJung/Space-Next/assets/63602609/3a751a76-4f67-45f0-a4dc-044a736765b5)
+
+![space-next3](https://github.com/jungwonJung/Space-Next/assets/63602609/4c59f009-968b-4715-a995-5349219b1051)
 
 
 A website that provides information on the upcoming SpaceX Launch. It consists of three sections:
